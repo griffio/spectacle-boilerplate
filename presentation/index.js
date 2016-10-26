@@ -48,6 +48,10 @@ const theme = createTheme({
     primary: "#2d2d2d"
 });
 
+const biggerCodeStyle = {
+    fontSize: "1.7rem"
+};
+
 export default class Presentation extends React.Component {
     render() {
         return (
@@ -109,10 +113,10 @@ export default class Presentation extends React.Component {
 
                     <Slide transition={["zoom", "fade"]} bgColor="primary"
                            notes="<ul><li>talk about that</li><li>and that</li></ul>">
-                        <CodePane
-                            lang="javascript"
-                            source={require("raw!../assets/jsx.example")}
-                            margin="5px auto"
+                        <CodePane style={biggerCodeStyle}
+                                  lang="javascript"
+                                  source={require("raw!../assets/jsx.example")}
+                                  margin="5px auto"
                         />
                     </Slide>
                     <Slide transition={["fade"]} bgColor="primary" textColor="white">
@@ -165,7 +169,8 @@ export default class Presentation extends React.Component {
                             Scala XML literals mistake? Scala has DSLs (code completion/ compiler)
                         </BlockQuote>
 
-                        <Link href="http://www.lihaoyi.com/scalatags/"><Text bold caps textColor="tertiary">Scala Tags</Text></Link>
+                        <Link href="http://www.lihaoyi.com/scalatags/"><Text bold caps textColor="tertiary">Scala
+                            Tags</Text></Link>
 
                         <CodePane
                             lang="scala"
